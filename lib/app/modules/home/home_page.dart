@@ -38,57 +38,78 @@ class HomePageState extends State<HomePage> {
           // MenuWidget(),
         ],
       ),
-      body: GridView.count(
-        primary: false,
-        padding: const EdgeInsets.all(20),
-        crossAxisSpacing: 10,
-        mainAxisSpacing: 10,
-        crossAxisCount: 3,
-        children: <Widget>[
-          Container(
-            padding: const EdgeInsets.all(8),
-            color: Colors.teal[100],
-            child: const Text("3/4"),
+      body: Column(
+        children: [
+          Flexible(
+            flex: 2,
+            child: GridView.count(
+              primary: false,
+              padding: const EdgeInsets.all(20),
+              crossAxisSpacing: 10,
+              mainAxisSpacing: 10,
+              crossAxisCount: 3,
+              children: <Widget>[
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  color: Colors.teal[100],
+                  child: const Text("3/4"),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  color: Colors.teal[200],
+                  child: const Text('Front'),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  color: Colors.teal[300],
+                  child: const Text('Oblique right + slightly'),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  color: Colors.teal[400],
+                  child: const Text('Profile'),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  color: Colors.teal[500],
+                  child: const Text('Oblique from behind'),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  color: Colors.teal[600],
+                  child: const Text('Oblique left + slightly above'),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  color: Colors.teal[400],
+                  child: const Text('From below'),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  color: Colors.teal[500],
+                  child: const Text('From above'),
+                ),
+                Container(
+                  padding: const EdgeInsets.all(8),
+                  color: Colors.teal[600],
+                  child: const Text('Oblique right'),
+                ),
+              ],
+            ),
           ),
-          Container(
-            padding: const EdgeInsets.all(8),
-            color: Colors.teal[200],
-            child: const Text('Front'),
-          ),
-          Container(
-            padding: const EdgeInsets.all(8),
-            color: Colors.teal[300],
-            child: const Text('Oblique right + slightly'),
-          ),
-          Container(
-            padding: const EdgeInsets.all(8),
-            color: Colors.teal[400],
-            child: const Text('Profile'),
-          ),
-          Container(
-            padding: const EdgeInsets.all(8),
-            color: Colors.teal[500],
-            child: const Text('Oblique from behind'),
-          ),
-          Container(
-            padding: const EdgeInsets.all(8),
-            color: Colors.teal[600],
-            child: const Text('Oblique left + slightly above'),
-          ),
-          Container(
-            padding: const EdgeInsets.all(8),
-            color: Colors.teal[400],
-            child: const Text('From below'),
-          ),
-          Container(
-            padding: const EdgeInsets.all(8),
-            color: Colors.teal[500],
-            child: const Text('From above'),
-          ),
-          Container(
-            padding: const EdgeInsets.all(8),
-            color: Colors.teal[600],
-            child: const Text('Oblique right'),
+          Flexible(
+            flex: 1,
+            child: ElevatedButton(
+              onPressed: () => {},
+              child: const Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(Icons.camera_alt_outlined),
+                  SizedBox(width: 8),
+                  Text('Nova Captura')
+                ],
+              ),
+            ),
           ),
         ],
       ),
